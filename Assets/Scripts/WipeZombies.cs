@@ -66,7 +66,6 @@ public class WipeZombies : MonoBehaviour
                 nmaScript.TargetSelf();
                 nmaScript.enabled = false;
             }
-
         }
 
         Array.Clear(zombieList, 0, zombieList.Length);

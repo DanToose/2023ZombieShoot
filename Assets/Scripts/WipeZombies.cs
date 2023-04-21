@@ -8,7 +8,7 @@ public class WipeZombies : MonoBehaviour
 {
     public Transform target;
     public GameObject[] zombieList;
-    //public GameObject[] enemy2List;      ADD THIS IF YOU WANT TO PURGE ENEMIES WITH OTHER TAGS.
+    public GameObject[] enemy2List;      //ADD THIS IF YOU WANT TO PURGE ENEMIES WITH OTHER TAGS.
 
     [Header("Events")]
     public GameEvent allZombiesWiped;
@@ -23,19 +23,20 @@ public class WipeZombies : MonoBehaviour
             Destroy(z.gameObject);
         }
 
-        /*
-        enemy2List = GameObject.FindGameObjectsWithTag("Enemy");   PUT THE OTHER TAG IN!!!
+
+        enemy2List = GameObject.FindGameObjectsWithTag("EnemyStrong");  //PUT THE OTHER TAG IN!!!
 
         foreach (GameObject y in enemy2List)
         {
             Destroy(y.gameObject);
         }
-        */
+        
 
         allZombiesWiped.Raise(this, null); // An event to note all Zombies were wiped if needed.
 
         Array.Clear(zombieList, 0, zombieList.Length);
         zombieList = null;
+        enemy2List=null;
     }
 
     public void WakeAllZombies()

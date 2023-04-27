@@ -8,6 +8,13 @@ TagManager:
   - LevelManager
   - Dimmer
   - EnemyStrong
+  - StartPoint
+  - Interact
+  - CheckPoint
+  - PlayerBody
+  - Light
+  - Collectable
+  - Carryable
   layers:
   - Default
   - TransparentFX
@@ -15,9 +22,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Collectable
   - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 

@@ -8804,6 +8804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
+      propertyPath: dropKey
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
+        type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 1250893187}
@@ -8825,12 +8830,12 @@ PrefabInstance:
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
       propertyPath: intMessage
-      value: LMB to activate
+      value: E to activate
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
       propertyPath: dropMessage
-      value: RMB to drop
+      value: F to drop
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
@@ -8840,7 +8845,7 @@ PrefabInstance:
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
       propertyPath: carryMessage
-      value: LMB to grab
+      value: E to grab
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
@@ -8849,13 +8854,18 @@ PrefabInstance:
       objectReference: {fileID: 104076719}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
+      propertyPath: useInventory
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
+        type: 3}
       propertyPath: carryPromptTxt
       value: 
       objectReference: {fileID: 1331154928}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
       propertyPath: collectMessage
-      value: LMB to pick up
+      value: E to pick up
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}
@@ -8866,6 +8876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: layerToHit.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
+        type: 3}
+      propertyPath: interactOrPickUpKey
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 5648477590726346242, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}

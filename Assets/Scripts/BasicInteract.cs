@@ -19,7 +19,7 @@ public class BasicInteract : MonoBehaviour
     private Ray g_ray = new Ray();
     public RaycastHit hitObject;
     public LayerMask layerToHit;
-    public GraphicRaycaster raycaster;
+    //public GraphicRaycaster raycaster;
     public float rayLength = 5f; // Adjust this if you want to adjust the 'click to grab' distance
     public Image CrosshairDot;
 
@@ -36,6 +36,9 @@ public class BasicInteract : MonoBehaviour
 
     // PROMPT SYSTEM VARS - All about options for showing prompts, and also for what text is shown when they fire.
     [Header("Prompt Options")]
+    public KeyCode interactOrPickUpKey;
+    public KeyCode dropKey;
+    public bool useInventory;
     public bool interactablePromptsText; // These are all a checkbox to see IF the player wants a popup or not.
     public Text intPromptTxt;
     public string intMessage;
@@ -53,9 +56,13 @@ public class BasicInteract : MonoBehaviour
     private Transform carryItemPosition;
     private Rigidbody rbOfCarriedItem;
 
+
     void Start()
     {
-        playerInventory = GameObject.Find("InventoryManager").GetComponent<InventorySystem>();
+        if (useInventory)
+        {
+            playerInventory = GameObject.Find("InventoryManager").GetComponent<InventorySystem>();
+        }
         rayHit = false;
         canInteract = false;
         CrosshairDot = GameObject.Find("CrosshairDot").GetComponent<Image>();
@@ -69,10 +76,10 @@ public class BasicInteract : MonoBehaviour
             playerInventory.RemoveItem(itemToDiscard);
 
         }
-        
+
         if (carriedItem != null) // IF YOU ARE CARRYING SOMETHING, CHECKS FOR AN INPUT TO DROP IT.
         {
-            if (Input.GetKeyUp(KeyCode.Mouse1))
+            if (Input.GetKeyUp(dropKey))
             {
                 DropObject();
             }
@@ -158,7 +165,7 @@ public class BasicInteract : MonoBehaviour
 
         if (canInteract == true)
         {
-            if (Input.GetKeyUp(KeyCode.Mouse0) && (interactiveObject != null))
+            if (Input.GetKeyUp(interactOrPickUpKey) && (interactiveObject != null))
             {
                 if (targetIsCarryable)
                 {
@@ -166,8 +173,12 @@ public class BasicInteract : MonoBehaviour
                 }
                 else if (targetIsCollctable)
                 {
-                    onInvItemTaken?.Invoke(interactiveObject.GetComponent<InvItemID>().ID); // ADD TO INVENTORY LIST
-                    interactiveObject.GetComponent<PickupThing>().CollectionEvent();
+                    if (useInventory)
+                    {
+                        onInvItemTaken?.Invoke(interactiveObject.GetComponent<InvItemID>().ID); // ADD TO INVENTORY LIST
+                        interactiveObject.GetComponent<PickupThing>().CollectionEvent();
+                    }
+
                     Destroy(interactiveObject); // REMOVE OBJECT FROM THE WORLD
                 }
                 else if (targetIsInteractive)
@@ -183,7 +194,7 @@ public class BasicInteract : MonoBehaviour
     {
         Debug.Log("CarryObject called!");
         rbOfCarriedItem = interactiveObject.GetComponent<Rigidbody>();
-        rbOfCarriedItem.useGravity = false; 
+        rbOfCarriedItem.useGravity = false;
         carriedItem = interactiveObject;
         carryItemPosition.position = carryPoint.position;
         carryItemPosition.parent = carryPoint;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e3fdcd94cfd874ca183ac0d62b7783, type: 3}
   m_Name: NewKey
   m_EditorClassIdentifier: 
-  g_name: Enter Item Name...
+  g_name: A Shiny New Key
   g_sprite: {fileID: 0}

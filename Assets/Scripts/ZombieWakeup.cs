@@ -28,17 +28,22 @@ public class ZombieWakeup : MonoBehaviour
     {
         if (Triggered == false && other.gameObject.tag == "Player")
         {
-            Triggered = true;
-            Zombie1.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie2.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie3.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie4.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie5.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie6.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie7.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie8.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie9.GetComponent<NavmeshAgentScript>().enabled = true;
-            Zombie10.GetComponent<NavmeshAgentScript>().enabled = true;
+            WakeupZombies();
         }
+    }
+
+    public void WakeupZombies()
+    {
+        Triggered = true;
+        Zombie1.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie2.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie3.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie4.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie5.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie6.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie7.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie8.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie9.GetComponent<NavmeshAgentScript>().enabled = true;
+        Zombie10.GetComponent<NavmeshAgentScript>().enabled = true;
     }
 }

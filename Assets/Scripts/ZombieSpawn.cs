@@ -23,13 +23,13 @@ public class ZombieSpawn : MonoBehaviour
     {
         if (Triggered == false && other.gameObject.tag == "Player")
         {
-            Triggered = true;
             SpawnZombies();
         }
     }
 
     public void SpawnZombies()
     {
+        Triggered = true;
         Instantiate(enemyPrefab, SpawnPoint1.transform.position, Quaternion.identity);
         Instantiate(enemyPrefab, SpawnPoint2.transform.position, Quaternion.identity);
         Instantiate(enemyPrefab, SpawnPoint3.transform.position, Quaternion.identity);

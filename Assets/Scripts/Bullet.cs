@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         LevelManager = GameObject.FindGameObjectWithTag("LevelManager");
 
         gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
-        Invoke("DestroySelf", 5.0f);
+        Invoke("DestroySelf", 5.0f); // Bullets that fly for 5 seconds without collision will 'die'
     }
 
     // Update is called once per frame
@@ -29,9 +29,13 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            LevelManager.GetComponent<LevelManager>().score++;
+            //LevelManager.GetComponent<LevelManager>().score++; REMOVE COMMENT IF YOU WANT TO USE A SCORE
             Instantiate(splatEffect, collision.transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
+
+            zHealth = collision.gameObject.GetComponent<ZombieHealth>();
+            zHealth.damageZombie(damage);
+
+            //Destroy(collision.gameObject);
         }
         
         if(collision.gameObject.tag == "EnemyStrong")

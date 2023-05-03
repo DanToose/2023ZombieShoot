@@ -168,3 +168,4 @@ MonoBehaviour:
   zombieHealth: 100
   maxZombieHealth: 100
   rb: {fileID: 0}
+  onZombieDies: {fileID: 11400000, guid: 4df44f858ba2aa34c9ac9bf0f4268fd3, type: 2}

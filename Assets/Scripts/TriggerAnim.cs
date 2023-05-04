@@ -29,4 +29,9 @@ public class TriggerAnim : MonoBehaviour
         }
 
     }
+
+    public void ResetAnim()
+    {
+        thingToAnimate.GetComponent<Animator>().SetTrigger("ResetThisAnim");
+    }
 }

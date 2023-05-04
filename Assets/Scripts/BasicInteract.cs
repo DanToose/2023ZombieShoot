@@ -179,6 +179,11 @@ public class BasicInteract : MonoBehaviour
                         interactiveObject.GetComponent<PickupThing>().CollectionEvent();
                     }
 
+                    if (interactiveObject.GetComponent<PickupThing>().isScoreItem == true)
+                    {
+                        interactiveObject.GetComponent<PickupThing>().AddScoreFromPickup(); 
+                    }
+
                     Destroy(interactiveObject); // REMOVE OBJECT FROM THE WORLD
                 }
                 else if (targetIsInteractive)

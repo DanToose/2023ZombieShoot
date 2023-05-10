@@ -21,7 +21,7 @@ public class AdjustPlayerMovement : MonoBehaviour
 
     public void ToggleDoubleJump()
     {
-        controller.allowDoubleJump = !controller.allowDoubleJump;
+        controller.allowDoubleJump = true; //!controller.allowDoubleJump;
     }
 
     public void SetJumpForce(float jForce)

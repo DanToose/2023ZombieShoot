@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float maxGroundDistance = 1.5f;
     private bool isGrounded;
     public bool allowDoubleJump = false;
-    public int amountOfJumps = 0;
+    private int amountOfJumps = 0;
     private float Zmovement = 0f;
     private float Xmovement = 0f;
 
@@ -65,30 +65,6 @@ public class PlayerController : MonoBehaviour
 
         Xmovement = 0;
         Zmovement = 0;
-
-        /* OLD MOVEMENT SCRIPT - ALLOWED FOR FASTER MOVEMENT BY MOVING DIAGONALLY.
-         
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position = transform.position + (transform.forward * speed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position = transform.position + (-transform.forward * speed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = transform.position + (transform.right * speed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position = transform.position + (-transform.right * speed * Time.deltaTime);
-        }
-         */
-
 
 
         if (Input.GetKeyDown("space"))

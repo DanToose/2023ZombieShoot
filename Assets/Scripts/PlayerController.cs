@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float maxGroundDistance = 1.5f;
     private bool isGrounded;
     public bool allowDoubleJump = false;
-    private int amountOfJumps = 0;
+    public int amountOfJumps = 0;
     private float Zmovement = 0f;
     private float Xmovement = 0f;
 

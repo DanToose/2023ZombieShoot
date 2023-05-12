@@ -9,6 +9,8 @@ public class ZombieHealth : MonoBehaviour
 
     public Rigidbody rb;
 
+    public EnemyManagerZ emZ;
+
     [Header("Events")]
     public GameEvent onZombieDies;
 
@@ -16,6 +18,7 @@ public class ZombieHealth : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        emZ = GameObject.FindGameObjectWithTag("GameManager").GetComponent<EnemyManagerZ>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class ZombieHealth : MonoBehaviour
         if (zombieHealth <= 0)
         {
             onZombieDies.Raise(this, null);
+            emZ.ResetEnemyList();
             Destroy(gameObject);
         }
         

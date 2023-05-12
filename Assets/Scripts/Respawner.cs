@@ -10,9 +10,9 @@ public class Respawner : MonoBehaviour
     private Transform checkpointLocation;
     public GameObject player;
     private GameObject startingPoint;
-    private CharacterController charController;
+    //private CharacterController charController;
     private EnemyManagerZ enemyManager;
-    private GameObject lightChecker;
+
 
 
     public Material activeMaterial;
@@ -23,9 +23,9 @@ public class Respawner : MonoBehaviour
     {
         //DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player");
-        charController = player.gameObject.GetComponent<CharacterController>();
+        //charController = player.gameObject.GetComponent<CharacterController>();
         enemyManager = GetComponent<EnemyManagerZ>();
-        lightChecker = GameObject.Find("lightChecker");
+
 
         startingPoint = GameObject.FindGameObjectWithTag("StartPoint");
         if (currentCheckpoint == null)
@@ -56,7 +56,7 @@ public class Respawner : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        charController.enabled = false;
+        //player.SetActive(false);
 
         enemyManager.ResetEnemies();
 
@@ -85,7 +85,7 @@ public class Respawner : MonoBehaviour
 
     private void ReactivateController()
     {
-        charController.enabled = true;
+        //player.SetActive(true);
     }
 
 

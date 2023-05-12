@@ -6,14 +6,22 @@ using UnityEngine.AI;
 public class NavmeshAgentScript : MonoBehaviour {
 
     public Transform target;
-    NavMeshAgent agent; 
+    NavMeshAgent agent;
+    public Transform startPos;
+
+
+
 
     // Use this for initialization
 	void Awake () 
     {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-	}
+        startPos = gameObject.transform;
+        Debug.Log(agent.transform.position);
+
+        Debug.Log("START POS = " + startPos.position);
+    }
 	
 	// Update is called once per frame
 	void Update () 

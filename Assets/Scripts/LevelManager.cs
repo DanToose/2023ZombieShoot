@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     public float damageMultiplyer = 1.0f;
     public Text highScoreText;
     public Text scoreText;
-    public Text healthText;
+    //public Text healthText;
     public Text ammoText;
     public GameObject playerGun;
     public Gun pg;
@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDamage>().health;
         ammo = pg.ammoCount;
         scoreText.text = "Score: " + score;
-        healthText.text = "Health: " + health;
+        //healthText.text = "Health: " + health;
         ammoText.text = "Ammo: " + ammo;
 
         if (highScore < score)

@@ -11,7 +11,9 @@ public class EnemyManagerZ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        ResetEnemyList();
+
+
     }
 
     // Update is called once per frame
@@ -24,22 +26,29 @@ public class EnemyManagerZ : MonoBehaviour
     {
         foreach (GameObject e in enemyList)
         {
-            enemyNMA = e.GetComponent<NavmeshAgentScript>();
-            /*
-            if (enemyNMA.jobIsPatrol)
+            Debug.Log("Checking: " + e.name);
+            if (e != null)
             {
-                enemyNMA.AIState = 3;
+                enemyNMA = e.GetComponent<NavmeshAgentScript>();
+                Debug.Log("Current Pos: " + e.transform.position + " NMA startPOS" + enemyNMA.startPos.position);
+                e.transform.position = enemyNMA.startPos.position;
+                e.transform.rotation = enemyNMA.startPos.rotation;
             }
-            else
-            {
-                enemyNMA.AIState = 4;
-            }
-            
-            e.transform.position = enemyNMA.wayPoints[0].transform.position;
-            e.transform.rotation = enemyNMA.wayPoints[0].transform.rotation;
-            */
+
 
         }
         Debug.Log("All Enemies reset");
     }
+
+    public void ResetEnemyList()
+    {
+        Debug.Log("Resetting Enemy List!");
+        enemyList.Clear();
+        enemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        enemyList.AddRange(GameObject.FindGameObjectsWithTag("EnemyStrong"));
+        // COPY PASTE FOR ALL OTHER ENEMY TYPES
+
+
+    }
+ 
 }

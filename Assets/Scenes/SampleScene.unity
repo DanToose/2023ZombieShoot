@@ -2497,6 +2497,37 @@ Transform:
   m_Father: {fileID: 91719119}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &526742027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526742028}
+  m_Layer: 0
+  m_Name: RefPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526742028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526742027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.59, y: 1.488, z: 53.039}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &594900837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4181318156574728216, guid: 414c1048ad79c674d9bc38e4ac758ac9,
@@ -8533,6 +8564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyType2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 132226288367825445, guid: 1aa2c4583b7f5334e8f97ede4fb7cb17,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 132226288367825447, guid: 1aa2c4583b7f5334e8f97ede4fb7cb17,
         type: 3}
@@ -16229,6 +16265,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Old3-lockDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 3017472311805389781, guid: a487a0ceb3b922c4dafc1f76e78552d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3017472311805389791, guid: a487a0ceb3b922c4dafc1f76e78552d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -16307,6 +16348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EnemyStrong
+      objectReference: {fileID: 0}
+    - target: {fileID: 132226288367825445, guid: 1aa2c4583b7f5334e8f97ede4fb7cb17,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 132226288367825447, guid: 1aa2c4583b7f5334e8f97ede4fb7cb17,
         type: 3}

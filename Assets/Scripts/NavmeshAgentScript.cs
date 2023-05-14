@@ -7,7 +7,7 @@ public class NavmeshAgentScript : MonoBehaviour {
 
     public Transform target;
     NavMeshAgent agent;
-    public Transform startPos;
+    public Vector3 startPos;
 
 
 
@@ -17,17 +17,18 @@ public class NavmeshAgentScript : MonoBehaviour {
     {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        startPos = gameObject.transform;
+        startPos = agent.transform.position;
         Debug.Log(agent.transform.position);
 
-        Debug.Log("START POS = " + startPos.position);
+        //Debug.Log("START POS = " + startPos);
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
         agent.SetDestination(target.position);
-	}
+        Debug.Log("START POS = " + startPos);
+    }
 
     public void TargetPlayer()
     {
@@ -39,4 +40,5 @@ public class NavmeshAgentScript : MonoBehaviour {
         target = gameObject.transform;
         agent.SetDestination(target.position);
     }
+
 }

@@ -33,7 +33,7 @@ public class InvSlotUi : MonoBehaviour
 
     public void ClearItem()
     {
-        Debug.Log("Setting fields to null for " + this.gameObject.name);
+        //Debug.Log("Setting fields to null for " + this.gameObject.name);
         this.g_item = null;
         this.g_text.text = null;
         this.g_icon.sprite = null;

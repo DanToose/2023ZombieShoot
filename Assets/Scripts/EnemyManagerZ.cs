@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyManagerZ : MonoBehaviour
 {
     public List<GameObject> enemyList = new List<GameObject>();
 
     private NavmeshAgentScript enemyNMA;
+    private NavMeshAgent eNMA;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,9 @@ public class EnemyManagerZ : MonoBehaviour
             if (e != null)
             {
                 enemyNMA = e.GetComponent<NavmeshAgentScript>();
-                Debug.Log("Current Pos: " + e.transform.position + " NMA startPOS" + enemyNMA.startPos.position);
-                e.transform.position = enemyNMA.startPos.position;
-                e.transform.rotation = enemyNMA.startPos.rotation;
+                eNMA = e.GetComponent<NavMeshAgent>();
+                eNMA.Warp(enemyNMA.startPos);
+
             }
 
 
@@ -50,5 +52,15 @@ public class EnemyManagerZ : MonoBehaviour
 
 
     }
- 
+
+    public void UpdateZStartPoints()
+    {
+        foreach (GameObject e in enemyList)
+        {
+            if (e != null)
+            {
+                enemyNMA.startPos = e.transform.position;
+            }
+        }
+    }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class EnemyManagerZ : MonoBehaviour
 {
@@ -9,11 +10,12 @@ public class EnemyManagerZ : MonoBehaviour
 
     private NavmeshAgentScript enemyNMA;
     private NavMeshAgent eNMA;
+    public int currentCP = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        ResetEnemyList();
+        ResetEnemyList(currentCP); // Establishes the Enemy List at CP 0 - The Start
 
 
     }
@@ -26,31 +28,40 @@ public class EnemyManagerZ : MonoBehaviour
 
     public void ResetEnemies()
     {
-        foreach (GameObject e in enemyList)
+        foreach (GameObject e in enemyList) // LIST WAS UPDATED AT LAST CP TOUCH
         {
-            Debug.Log("Checking: " + e.name);
             if (e != null)
             {
                 enemyNMA = e.GetComponent<NavmeshAgentScript>();
                 eNMA = e.GetComponent<NavMeshAgent>();
                 eNMA.Warp(enemyNMA.startPos);
-
+                e.GetComponent<ZombieHealth>().ReviveZombie();
             }
-
-
         }
-        Debug.Log("All Enemies reset");
+        Debug.Log("All Enemies moved to start");
     }
 
-    public void ResetEnemyList()
+    // THIS RESETS THE LIST OF ENEMIES TRACKED - JUST THE LIST
+    public void ResetEnemyList(int cpID)
     {
+        currentCP = cpID;
         Debug.Log("Resetting Enemy List!");
         enemyList.Clear();
         enemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         enemyList.AddRange(GameObject.FindGameObjectsWithTag("EnemyStrong"));
         // COPY PASTE FOR ALL OTHER ENEMY TYPES
 
-
+        foreach (GameObject e in enemyList)
+        {
+            if (e.GetComponent<ZombieHealth>().checkPointNumber < cpID)
+            {
+                enemyList.Remove(e);
+                if (e.GetComponent<ZombieHealth>().zombieHealth <= 0)
+                {
+                    Destroy(e); // Also destroys any lingering Zombie Ghosts
+                }
+            }
+        }
     }
 
     public void UpdateZStartPoints()

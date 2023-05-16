@@ -6,11 +6,10 @@ public class Medpack : MonoBehaviour
 {
     public float HealAmount;
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,7 +18,6 @@ public class Medpack : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerDamage>().health += HealAmount;
-            Destroy(gameObject);
         }
     }
 }

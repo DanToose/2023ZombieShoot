@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieHealth : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ZombieHealth : MonoBehaviour
     public Rigidbody rb;
 
     public EnemyManagerZ emZ;
+    public int checkPointNumber;
 
     [Header("Events")]
     public GameEvent onZombieDies;
@@ -35,9 +37,24 @@ public class ZombieHealth : MonoBehaviour
         if (zombieHealth <= 0)
         {
             onZombieDies.Raise(this, null);
-            emZ.ResetEnemyList();
-            Destroy(gameObject);
+            //emZ.ResetEnemyList(); NO LONGER REMOVING FROM LIST ON DEATH
+            GhostZombie();
         }
         
+    }
+
+    public void GhostZombie()
+    {
+        GetComponent<Renderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<NavmeshAgentScript>().TargetSelf();
+    }
+
+    public void ReviveZombie()
+    {
+        GetComponent<Renderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
+        GetComponent<NavmeshAgentScript>().TargetPlayer();
+        zombieHealth = maxZombieHealth;
     }
 }

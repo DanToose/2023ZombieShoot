@@ -11,6 +11,8 @@ public class CheckPoint : MonoBehaviour
     public GameObject gameManager;
     public GameObject oldCheckpoint;
     public Respawner respawn;
+    public int checkPointID;
+    public bool sequentialOnly;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +35,18 @@ public class CheckPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !isStartpointOnly)
         {
-            oldCheckpoint = gameManager.gameObject.GetComponent<Respawner>().currentCheckpoint;
-            oldCheckpoint.GetComponent<CheckPoint>().isCheckpoint = false;
+            if (checkPointID > respawn.currentCPID || !sequentialOnly) // Must be a higher CP# or not 'Sequential Only' 
+            {
+                oldCheckpoint = gameManager.gameObject.GetComponent<Respawner>().currentCheckpoint;
+                oldCheckpoint.GetComponent<CheckPoint>().isCheckpoint = false;
 
-            isCheckpoint = true;
-            gameManager.gameObject.GetComponent<Respawner>().currentCheckpoint = gameObject;
+                isCheckpoint = true;
+                //gameManager.gameObject.GetComponent<Respawner>().currentCheckpoint = gameObject;
+                respawn.currentCheckpoint = gameObject;
 
-            respawn.UpdateCheckPoints();
+                respawn.UpdateCheckPoints(checkPointID);
+            }
+
 
         }
     }

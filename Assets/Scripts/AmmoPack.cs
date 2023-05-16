@@ -7,6 +7,9 @@ public class AmmoPack : MonoBehaviour
     public GameObject playerGun;
     public Gun pg;
     public int ammoInPack = 20;
+
+    public int checkPointID;
+    public bool isTaken;
     
     // Start is called before the first frame update
     void Start()
@@ -27,9 +30,24 @@ public class AmmoPack : MonoBehaviour
                 {
                     pg.ammoCount = pg.ammoMax;
                 }
-                Destroy(gameObject);
+                GhostObject();
+                isTaken = true;
             }
 
         }
     }
+
+    public void GhostObject()
+    {
+        GetComponent<Renderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+    }
+
+    public void ActivateObject()
+    {
+        GetComponent<Renderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
+    }
+
+
 }

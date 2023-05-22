@@ -51,11 +51,13 @@ public class EnemyManagerZ : MonoBehaviour
         enemyList.AddRange(GameObject.FindGameObjectsWithTag("EnemyStrong"));
         // COPY PASTE FOR ALL OTHER ENEMY TYPES
 
-        foreach (GameObject e in enemyList)
+        for(int i = 0; i < enemyList.Count; i++)
         {
+            GameObject e = enemyList[i];
             if (e.GetComponent<ZombieHealth>().checkPointNumber < cpID)
             {
-                enemyList.Remove(e);
+                enemyList.RemoveAt(i);
+                i--;
                 if (e.GetComponent<ZombieHealth>().zombieHealth <= 0)
                 {
                     Destroy(e); // Also destroys any lingering Zombie Ghosts

@@ -34,7 +34,7 @@ public class ItemManager : MonoBehaviour
     public void ResetItemList(int cpID)
     {
         currentCPID = cpID;
-        Debug.Log("Resetting Item List!");
+        Debug.Log("Resetting Item List! Current CPID = " + currentCPID);
         itemList.Clear();
         ItemRespawn[] respawnableItems = FindObjectsOfType<ItemRespawn>();
         // COPY PASTE FOR ALL OTHER ITEM TYPES YOU NEED TO RESPAWN
@@ -51,7 +51,8 @@ public class ItemManager : MonoBehaviour
         {
             if (item.GetComponent<ItemRespawn>().checkPointID < cpID)
             {
-                itemList.Remove(item);
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                itemList.Remove(item); // Must be replaced with for loop like in enemy manager
                 if (item.GetComponent<ItemRespawn>().isTaken)
                 {
                     Destroy(item); // Also destroys any lingering item references from old CP

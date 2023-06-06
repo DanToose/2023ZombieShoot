@@ -859,6 +859,7 @@ MonoBehaviour:
   triggerName: NewDoorOpen
   playRepeatedly: 0
   playedOnce: 0
+  associatedCP: 0
   onEndAnim: {fileID: 0}
 --- !u!65 &239050843
 BoxCollider:
@@ -13043,6 +13044,7 @@ MonoBehaviour:
   respawn: {fileID: 0}
   currentCPID: 0
   itemList: []
+  animList: []
 --- !u!1001 &1492640646
 PrefabInstance:
   m_ObjectHideFlags: 0

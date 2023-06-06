@@ -62,8 +62,11 @@ public class Respawner : MonoBehaviour
     // BOTH RESPAWNS THE PLAYER, AND TRIGGERS THE RESET OF THINGS RELATED TO THE CURRENT CP.
     public void RespawnPlayer()
     {
-        enemyManager.ResetEnemies();
+        enemyManager.ResetEnemies(currentCPID);
+        enemyManager.ResetEnemyList(currentCPID);
         itemManager.ResetItems();
+        itemManager.ResetAnims(currentCPID);
+        itemManager.ResetAnimList(currentCPID);
 
         // positions the player at the CP
         checkpointLocation = currentCheckpoint.transform;
@@ -98,6 +101,7 @@ public class Respawner : MonoBehaviour
 
         enemyManager.ResetEnemyList(currentCPID);
         itemManager.ResetItemList(currentCPID);
+        itemManager.ResetAnimList(currentCPID);
 
     }
 

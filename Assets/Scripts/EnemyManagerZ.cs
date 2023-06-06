@@ -1,11 +1,14 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
 public class EnemyManagerZ : MonoBehaviour
 {
+    public bool cullOldZombiesOnRespawn = true;
     public List<GameObject> enemyList = new List<GameObject>();
 
     private NavmeshAgentScript enemyNMA;
@@ -26,7 +29,7 @@ public class EnemyManagerZ : MonoBehaviour
         
     }
 
-    public void ResetEnemies()
+    public void ResetEnemies(int cpID)
     {
         foreach (GameObject e in enemyList) // LIST WAS UPDATED AT LAST CP TOUCH
         {
@@ -39,6 +42,27 @@ public class EnemyManagerZ : MonoBehaviour
             }
         }
         Debug.Log("All Enemies moved to start");
+        
+        if (cullOldZombiesOnRespawn) // If Inspector checkbox is on, cull any zombies from old CPs when after resetting enemies.
+        {
+            List<GameObject> cullEnemyList = new List<GameObject>();
+            cullEnemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+            cullEnemyList.AddRange(GameObject.FindGameObjectsWithTag("EnemyStrong"));
+            for (int i = 0; i < cullEnemyList.Count; i++)
+            {
+                GameObject x = cullEnemyList[i];
+                if (x.GetComponent<ZombieHealth>().checkPointNumber < cpID)
+                {
+                    cullEnemyList.RemoveAt(i);
+                    i--;
+                    Destroy(x);
+                }
+
+            }
+        }
+
+
+
     }
 
     // THIS RESETS THE LIST OF ENEMIES TRACKED - JUST THE LIST

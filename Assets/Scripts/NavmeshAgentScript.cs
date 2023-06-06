@@ -19,15 +19,12 @@ public class NavmeshAgentScript : MonoBehaviour {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = agent.transform.position;
         Debug.Log(agent.transform.position);
-
-        //Debug.Log("START POS = " + startPos);
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
         agent.SetDestination(target.position);
-        Debug.Log("START POS = " + startPos);
     }
 
     public void TargetPlayer()

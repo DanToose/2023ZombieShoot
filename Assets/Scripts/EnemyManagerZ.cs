@@ -39,6 +39,8 @@ public class EnemyManagerZ : MonoBehaviour
                 eNMA = e.GetComponent<NavMeshAgent>();
                 eNMA.Warp(enemyNMA.startPos);
                 e.GetComponent<ZombieHealth>().ReviveZombie();
+                // New target reset
+                enemyNMA.target = GameObject.FindGameObjectWithTag("Player").transform;
             }
         }
         Debug.Log("All Enemies moved to start");
@@ -86,6 +88,17 @@ public class EnemyManagerZ : MonoBehaviour
                 {
                     Destroy(e); // Also destroys any lingering Zombie Ghosts
                 }
+            }
+        }
+    }
+
+    public void StopZombiesMoving()
+    {
+        foreach (GameObject e in enemyList)
+        {
+            if (e != null && e.GetComponent<NavmeshAgentScript>().enabled) 
+            {
+                e.GetComponent<NavmeshAgentScript>().target = e.transform;
             }
         }
     }

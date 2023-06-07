@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour
@@ -25,6 +22,7 @@ public class PlayerDamage : MonoBehaviour
     public Text deathText;
     public Text respawnText;
     public Image deathPanel;
+    public PlayerController pc;
 
     [Header("Events")]
     public GameEvent onPlayerDies;
@@ -42,6 +40,7 @@ public class PlayerDamage : MonoBehaviour
         respawnText.text = "";
         deathText.text = "";
         deathPanel.gameObject.SetActive(false);
+        pc = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -74,19 +73,19 @@ public class PlayerDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            HurtMeDaddy(damageScaleNormal);
+            DamagePlayer(damageScaleNormal);
         }
         else if (collision.gameObject.tag == "EnemyStrong")
         {
-            HurtMeDaddy(damageScaleElite1);
+            DamagePlayer(damageScaleElite1);
         }
         else if (collision.gameObject.tag == "EnemyBoss")
         {
-            HurtMeDaddy(damageScaleElite2);
+            DamagePlayer(damageScaleElite2);
         }
     }
 
-    public void HurtMeDaddy(float scale)
+    public void DamagePlayer(float scale)
     {
         timer = timer + Time.deltaTime;
         painTimer = painTimer - Time.deltaTime;
@@ -106,6 +105,7 @@ public class PlayerDamage : MonoBehaviour
     public void playerDeath()
     {
         // death stuff
+        pc.enabled = false;
         deathPanel.gameObject.SetActive(true);
         deathText.text = "You Died!";
         playerIsAlive = false;
@@ -114,7 +114,8 @@ public class PlayerDamage : MonoBehaviour
         // CHAR CONTROLLER SHOULD STOP AT THIS POINT
         //charController.enabled = false;
 
-
+        EnemyManagerZ eM = FindObjectOfType<EnemyManagerZ>();
+        eM.StopZombiesMoving();
 
     }
 
@@ -132,6 +133,7 @@ public class PlayerDamage : MonoBehaviour
             playerIsAlive = true;
             onPlayerResawns.Raise(this, null);
             respawn.RespawnPlayer();
+            pc.enabled = true;
         }
     }
 }

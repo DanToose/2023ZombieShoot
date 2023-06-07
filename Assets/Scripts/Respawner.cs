@@ -41,7 +41,6 @@ public class Respawner : MonoBehaviour
         currentCPID = 0;
 
         CPList.AddRange(GameObject.FindGameObjectsWithTag("CheckPoint"));
-
         InitialSpawn();
 
 
@@ -67,6 +66,7 @@ public class Respawner : MonoBehaviour
         itemManager.ResetItems();
         itemManager.ResetAnims(currentCPID);
         itemManager.ResetAnimList(currentCPID);
+        ResetCPBasedTriggers();
 
         // positions the player at the CP
         checkpointLocation = currentCheckpoint.transform;
@@ -102,6 +102,19 @@ public class Respawner : MonoBehaviour
         enemyManager.ResetEnemyList(currentCPID);
         itemManager.ResetItemList(currentCPID);
         itemManager.ResetAnimList(currentCPID);
+
+    }
+
+    private void ResetCPBasedTriggers()
+    {
+        EventZone[] ezTriggerList = FindObjectsOfType<EventZone>();
+        foreach (EventZone ezTrigger in ezTriggerList)
+        {
+            if (ezTrigger.isCheckPointLinked)
+            {
+                ezTrigger.ResetEventZone(currentCPID);
+            }
+        }
 
     }
 

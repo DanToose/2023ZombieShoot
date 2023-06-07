@@ -10,6 +10,7 @@ public class ZombieHealth : MonoBehaviour
 
     public Rigidbody rb;
 
+    public LevelManager lm;
     public EnemyManagerZ emZ;
     public int checkPointNumber;
 
@@ -21,6 +22,7 @@ public class ZombieHealth : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         emZ = GameObject.FindGameObjectWithTag("GameManager").GetComponent<EnemyManagerZ>();
+        lm = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
@@ -37,7 +39,7 @@ public class ZombieHealth : MonoBehaviour
         if (zombieHealth <= 0)
         {
             onZombieDies.Raise(this, null);
-            //emZ.ResetEnemyList(); NO LONGER REMOVING FROM LIST ON DEATH
+            lm.score++; // Add one to score on zombie death
             GhostZombie();
         }
         

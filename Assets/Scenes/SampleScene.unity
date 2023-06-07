@@ -859,7 +859,7 @@ MonoBehaviour:
   triggerName: NewDoorOpen
   playRepeatedly: 0
   playedOnce: 0
-  associatedCP: 0
+  associatedCP: 2
   onEndAnim: {fileID: 0}
 --- !u!65 &239050843
 BoxCollider:
@@ -16750,10 +16750,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181318156574728212, guid: 414c1048ad79c674d9bc38e4ac758ac9,
         type: 3}
+      propertyPath: resetUpToCP
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181318156574728212, guid: 414c1048ad79c674d9bc38e4ac758ac9,
+        type: 3}
       propertyPath: onTriggerEntered
       value: 
       objectReference: {fileID: 11400000, guid: c805598f16090264cb279a2a4cb8f4f1,
         type: 2}
+    - target: {fileID: 4181318156574728212, guid: 414c1048ad79c674d9bc38e4ac758ac9,
+        type: 3}
+      propertyPath: isCheckPointLinked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4181318156574728213, guid: 414c1048ad79c674d9bc38e4ac758ac9,
         type: 3}
       propertyPath: m_Size.y

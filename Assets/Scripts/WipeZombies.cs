@@ -24,13 +24,14 @@ public class WipeZombies : MonoBehaviour
         }
 
 
-        enemy2List = GameObject.FindGameObjectsWithTag("EnemyStrong");  //PUT THE OTHER TAG IN!!!
+        enemy2List = GameObject.FindGameObjectsWithTag("EnemyStrong");  
 
         foreach (GameObject y in enemy2List)
         {
             Destroy(y.gameObject);
         }
         
+        // IF YOU HAVE MORE ENEMY TYPES, PUT THEM IN HERE, COPYING THE CODE ABOVE, THEN IDENTIFYING THEM BY TAG.
 
         allZombiesWiped.Raise(this, null); // An event to note all Zombies were wiped if needed.
 

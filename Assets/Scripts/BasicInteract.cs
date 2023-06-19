@@ -177,6 +177,11 @@ public class BasicInteract : MonoBehaviour
                 }
                 else if (targetIsCollctable)
                 {
+                    if (interactiveObject.GetComponent<PickupThing>().isScoreItem)
+                    {
+                        interactiveObject.GetComponent<PickupThing>().AddScoreFromPickup();
+                    }
+                    
                     if (useInventory)
                     {
                         onInvItemTaken?.Invoke(interactiveObject.GetComponent<InvItemID>().ID); // ADD TO INVENTORY LIST

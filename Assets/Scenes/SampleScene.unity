@@ -13187,10 +13187,14 @@ MonoBehaviour:
     ZombieHealth script can be used in this setup.
 
 
-    There is also a Checkpoint
-    value in the inspector to set. This will reset the trigger if the player dies
-    without reaching this checkpoint number - So it can be re-used in a set-piece
-    challenge.
+    You can set any number of
+    spawn points, but here we have set up four - They are all behind the barrier
+    to the right.
+
+
+    There is also a Checkpoint value in the inspector to set.
+    This will reset the trigger if the player dies without reaching this checkpoint
+    number - So it can be re-used in a set-piece challenge.
 
 '
   m_isRightToLeft: 0

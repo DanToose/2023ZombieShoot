@@ -61,6 +61,7 @@ public class Respawner : MonoBehaviour
     // BOTH RESPAWNS THE PLAYER, AND TRIGGERS THE RESET OF THINGS RELATED TO THE CURRENT CP.
     public void RespawnPlayer()
     {
+        StopEndlessSpawners();
         enemyManager.ResetEnemies(currentCPID);
         enemyManager.ResetEnemyList(currentCPID);
         itemManager.ResetItems();
@@ -121,5 +122,14 @@ public class Respawner : MonoBehaviour
     private void ReactivateController()
     {
         //player.SetActive(true);
+    }
+
+    private void StopEndlessSpawners()
+    {
+        Spawner[] allSpawners = FindObjectsOfType<Spawner>();
+        foreach (Spawner s in allSpawners)
+        {
+            s.CancelSpawning();
+        }
     }
 }

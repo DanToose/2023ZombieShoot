@@ -2314,6 +2314,144 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2480485980026342391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &281842980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281842981}
+  - component: {fileID: 281842983}
+  - component: {fileID: 281842982}
+  m_Layer: 5
+  m_Name: ExampleText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &281842981
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281842980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalScale: {x: 0.18428026, y: 0.18428026, z: 0.18428026}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1191591905}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.188, y: 0}
+  m_SizeDelta: {x: 252.462, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &281842982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281842980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Very simply, this trigger zone will just cause massive damage to the player
+    and kill them. This is useful if you wish to test what happens when the player
+    dies, but there are no active threats in the level to kill the player - That's
+    it.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278255359
+  m_fontColor: {r: 1, g: 0.9960785, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 10
+  m_fontSizeBase: 10
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 4.581257, y: 3.4273834, z: 6.7915344, w: -8.183235}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &281842983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281842980}
+  m_CullTransparentMesh: 1
 --- !u!1 &285394761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +3063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Health & Ammo Packs
+  m_text: Medpacks & Ammo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3188,8 +3326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4131, y: 3.5}
-  m_SizeDelta: {x: 132.4786, y: 45.8}
+  m_AnchoredPosition: {x: 1.9908991, y: 3.5}
+  m_SizeDelta: {x: 142.4304, y: 45.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &361062817 stripped
 Transform:
@@ -3524,19 +3662,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This isn\u2019t the only Event Zone in the level, but it this one is the
-    most basic application as it does nothing beyond fire an event. This particular
-    trigger will fire \u2018NewDoorUnlocked\u2019 \u2013 A shortcut to open the door
-    to the right without using the key.\n\nOn an EventZone script, there are several
-    controls.:\r\n1) IsRepeatable \u2013 A checkbox that means this trigger can be
-    used to fire the same event multiple times without any other conditions. This
-    is useful for something that can respond to an event multiple times without the
-    player dying or the level resetting.\r\n\n2) IsCheckPointLinked \u2013 A checkbox
-    to ensure this event trigger can be reset on player death.\r\n\n3) ResetUpToCP
-    \u2013 The checkpoint ID (an integer) to work with IsCheckPointLinked, identifying
-    the CP this will reset up to. If the player reaches a higher CP number, this
-    will no longer reset.\r\n\n4) OnTriggerEntered \u2013 The event this trigger
-    will fire.\r\n"
+  m_text: "Inventory Items are simple to set up, they work via a combo of the 'PickupThing'
+    script, and 'InvItemID' script - The former facilitates picking up the object,
+    the latter connects it to a scriptable object and assigns an ID number to the
+    object.\n\nEnsure that when you apply the PickupThing script that you only check
+    ONE of the first three checkboxes.\n- If 'isCollectableToInv', make sure the
+    object is NOT a trigger.\n- If 'isRunOverPickUp', make sure the object IS a trigger.\n-
+    Note that 'IsCarryable' is NOT for inventory items, and works with the BasicInteract
+    system to allow you carry an object and drop it.  \n\nIt is very important that
+    each object with InvItedID has a unique number, or the player will collect ALL
+    instances of objects with that ID when they grab it.\n\nFinally, an assumption
+    has been made that Inventory Items will NOT be connected to Checkpoints for purposes
+    of respawning them, etc. So if the player gets an item, and dies, they will still
+    have that item - Ensure your Checkpoint plans account for this."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3599,7 +3737,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3731079, y: 3.4273834, z: 26.620377, w: -8.183235}
+  m_margin: {x: -0.3731079, y: 3.4273834, z: 22.146393, w: -8.183235}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11448,8 +11586,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6995695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6995695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6995695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.528
+      value: -10.982
       objectReference: {fileID: 0}
     - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
@@ -11459,7 +11612,7 @@ PrefabInstance:
     - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.948
+      value: 15.198
       objectReference: {fileID: 0}
     - target: {fileID: 6923281313602580200, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
@@ -11511,10 +11664,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Collectable
       objectReference: {fileID: 0}
+    - target: {fileID: 6923281313602580213, guid: 03e6406f989a9f3418568ba4823f1999,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba800fa3ef7b2e44ba576b2bb8b63787, type: 2}
     - target: {fileID: 6923281313602580214, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923281313602580215, guid: 03e6406f989a9f3418568ba4823f1999,
+        type: 3}
+      propertyPath: isRunOverPickUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6923281313602580215, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
@@ -11525,7 +11688,7 @@ PrefabInstance:
     - target: {fileID: 6923281313602580215, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
       propertyPath: isCollectableToInv
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e6406f989a9f3418568ba4823f1999, type: 3}
@@ -11662,6 +11825,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &885567745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885567746}
+  - component: {fileID: 885567749}
+  - component: {fileID: 885567748}
+  - component: {fileID: 885567747}
+  - component: {fileID: 885567750}
+  m_Layer: 0
+  m_Name: DeathZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &885567746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885567745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10.41, z: 0}
+  m_LocalScale: {x: 1, y: 18.914, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1469736728}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &885567747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885567745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &885567748
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885567745}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2af2e0060bb103c4aae2a193e9a82ad8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &885567749
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885567745}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &885567750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885567745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fd62b7e514e764ca17a74a00540387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &888172886
 GameObject:
   m_ObjectHideFlags: 0
@@ -11746,6 +12019,141 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 401715373293098206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &934973806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934973807}
+  - component: {fileID: 934973809}
+  - component: {fileID: 934973808}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &934973807
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934973806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.4}
+  m_LocalScale: {x: 0.30173, y: 0.30173, z: 0.30173}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1191591905}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 22.8}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &934973808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934973806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Death Zone
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -31.865677, y: 0, z: -31.465546, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &934973809
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934973806}
+  m_CullTransparentMesh: 1
 --- !u!1 &938420189
 GameObject:
   m_ObjectHideFlags: 0
@@ -13129,6 +13537,82 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1111922243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1111922244}
+  - component: {fileID: 1111922246}
+  - component: {fileID: 1111922245}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1111922244
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111922243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalScale: {x: 0.31606707, y: 0.31606707, z: 0.31606707}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1191591905}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.20216942, y: -1.5082531}
+  m_SizeDelta: {x: 100.21, y: 89.857}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1111922245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111922243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1111922246
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111922243}
+  m_CullTransparentMesh: 1
 --- !u!1 &1112376572 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
@@ -13941,6 +14425,109 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1190378480}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1191591901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1191591905}
+  - component: {fileID: 1191591904}
+  - component: {fileID: 1191591903}
+  - component: {fileID: 1191591902}
+  m_Layer: 5
+  m_Name: Guide-DeathZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1191591902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191591901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1191591903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191591901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 2
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &1191591904
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191591901}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1191591905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191591901}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 7.07}
+  m_LocalScale: {x: 0.11612, y: 0.11612, z: 0.11612}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1111922244}
+  - {fileID: 281842981}
+  - {fileID: 934973807}
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 46.57, y: 3.5}
+  m_SizeDelta: {x: 46.8999, y: 45.8}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1194937059
 GameObject:
   m_ObjectHideFlags: 0
@@ -14451,7 +15038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251919471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.57, y: 0.012, z: 15.89}
+  m_LocalPosition: {x: 10.86, y: 0.012, z: 15.89}
   m_LocalScale: {x: 1, y: 0.072962, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15093,8 +15680,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0739975, y: -1.5082531}
-  m_SizeDelta: {x: 270.039, y: 89.857}
+  m_AnchoredPosition: {x: 0.36499786, y: -1.5082531}
+  m_SizeDelta: {x: 295.634, y: 89.857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327669083
 MonoBehaviour:
@@ -16353,7 +16940,14 @@ MonoBehaviour:
 
     The ''isStartpoint'' checkbox on it denotes
     it as the place the Respawner on the GameManager will use to spawn the player
-    at the start of the game.'
+    at the start of the game. You can use this to start from a certain Checkpoint
+    in testing too.
+
+
+    It starts lit up because it is the active Checkpoint -
+    The Respawner script on the GameManager keeps track of the Checkpoints and can
+    assign an active and inactive material to Checkpoints based on their current
+    status.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16723,6 +17317,104 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1457420904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1469736727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469736728}
+  - component: {fileID: 1469736731}
+  - component: {fileID: 1469736730}
+  - component: {fileID: 1469736729}
+  m_Layer: 0
+  m_Name: KillPlayer-Plate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469736728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469736727}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.04, y: 0.01, z: 7.29}
+  m_LocalScale: {x: 1, y: 0.15899, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 885567746}
+  m_Father: {fileID: 1702604668}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1469736729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469736727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1469736730
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469736727}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d43b738e7a1324e74951a4f6d5569ad4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1469736731
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469736727}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1478887003
 GameObject:
   m_ObjectHideFlags: 0
@@ -17677,6 +18369,7 @@ Transform:
   - {fileID: 1295472993}
   - {fileID: 654454109}
   - {fileID: 453768700}
+  - {fileID: 1469736728}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19345,19 +20038,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This isn\u2019t the only Event Zone in the level, but it this one is the
-    most basic application as it does nothing beyond fire an event. This particular
-    trigger will fire \u2018NewDoorUnlocked\u2019 \u2013 A shortcut to open the door
-    to the right without using the key.\n\nOn an EventZone script, there are several
-    controls.:\r\n1) IsRepeatable \u2013 A checkbox that means this trigger can be
-    used to fire the same event multiple times without any other conditions. This
-    is useful for something that can respond to an event multiple times without the
-    player dying or the level resetting.\r\n\n2) IsCheckPointLinked \u2013 A checkbox
-    to ensure this event trigger can be reset on player death.\r\n\n3) ResetUpToCP
-    \u2013 The checkpoint ID (an integer) to work with IsCheckPointLinked, identifying
-    the CP this will reset up to. If the player reaches a higher CP number, this
-    will no longer reset.\r\n\n4) OnTriggerEntered \u2013 The event this trigger
-    will fire.\r\n"
+  m_text: "Medpacks and Ammo Packs are special types of item that integrate with
+    the player's health and ammo count respectively. \n\nEach type has very obvious
+    exposed fields in the inspector so you can set how much health and ammo these
+    objects provide.\n\nIf you want to have health and ammo objects set up to be
+    available based on checkpoint, it is vital you also have an 'ItemRespawn' script
+    on them. This will give you a lot of control over providing the right resources
+    for a section of your level.\n\n- The Checkpoint value you put in is INCLUSIVE.
+    So if you set an object to Checkpoint 1, it will respawn on player death until
+    the player reaches Checkpoint 2, then it will no longer return."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19973,7 +20662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.044, y: 22.8}
+  m_AnchoredPosition: {x: -0.04399991, y: 22.8}
   m_SizeDelta: {x: 374.631, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988657925
@@ -20274,7 +20963,19 @@ MonoBehaviour:
     \u2013 A script that works in tandem with a TextPopup, updating the text on it
     and also passing in a new event to fire on this text being exhausted too. \r\n3)
     Event Listener \u2013 This waits for the \u2018Q1-Done\u2019 event to fire the
-    UpdateTextFields() function on the NewTextSet.\r\n\nBLAH"
+    UpdateTextFields() function on the NewTextSet.\r\n\nThere are TWO objectives
+    to handle this quest. One to get the item, and the other to return it. This system
+    works much better if your objectives are granular and set up as a step-by-step
+    system. Some things to note / remember:\nA) Give every objective a unique ID
+    number or you will have problems.\nB) Unless an objective requires the player
+    to do the same thing X times, always set it to have 'Objective Parts Total' to
+    1.\nC) If an objective involves getting an Inventory Item, check 'Involves Item'
+    to be on. If it involves handing over an Inventory Item, set 'Involves Item Loss'
+    to on. Only set these true in these cases. \n\nEach objective ALWAYS has two
+    event listeners on it, one to fire 'StartQuest' and one to fire 'AddQuestStep'.
+    It is STRONGLY recommended you examine how this quest is set up in terms of 'OnObjectiveCompleted'
+    for the first step - This is key to ensuring the quest will work if the player
+    finds the item first."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20337,7 +21038,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -145.98979, y: 3.4273834, z: -111.44003, w: -8.183235}
+  m_margin: {x: -177.18636, y: 3.4273834, z: -148.09058, w: -8.183235}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21717,6 +22418,17 @@ PrefabInstance:
       propertyPath: SpawnPoint3
       value: 
       objectReference: {fileID: 1962397452}
+    - target: {fileID: 909471976281824290, guid: b4e0ecb96c28a4446ba27d1247ebe17d,
+        type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 2111209582486788022, guid: 9ed8493a632bc4f46985dc23a25087e1,
+        type: 3}
+    - target: {fileID: 909471976281824290, guid: b4e0ecb96c28a4446ba27d1247ebe17d,
+        type: 3}
+      propertyPath: relatedCheckpoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 909471976281824294, guid: b4e0ecb96c28a4446ba27d1247ebe17d,
         type: 3}
       propertyPath: m_RootOrder
@@ -21858,7 +22570,7 @@ PrefabInstance:
     - target: {fileID: 4235524108476322040, guid: 74c1f149f4f69434b8fb2cfa9f08a14c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.58
+      value: 11.02
       objectReference: {fileID: 0}
     - target: {fileID: 4235524108476322040, guid: 74c1f149f4f69434b8fb2cfa9f08a14c,
         type: 3}
@@ -22644,7 +23356,7 @@ PrefabInstance:
     - target: {fileID: 7753052768578782791, guid: 4b5ad4b04ef159247809819b1893bd2f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.493
+      value: -20.283
       objectReference: {fileID: 0}
     - target: {fileID: 7753052768578782791, guid: 4b5ad4b04ef159247809819b1893bd2f,
         type: 3}
@@ -22654,7 +23366,7 @@ PrefabInstance:
     - target: {fileID: 7753052768578782791, guid: 4b5ad4b04ef159247809819b1893bd2f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.418
+      value: 15.4
       objectReference: {fileID: 0}
     - target: {fileID: 7753052768578782791, guid: 4b5ad4b04ef159247809819b1893bd2f,
         type: 3}

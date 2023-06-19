@@ -14,6 +14,8 @@ public class ZombieHealth : MonoBehaviour
     public EnemyManagerZ emZ;
     public int checkPointNumber;
 
+    public bool zSpawned;
+
     [Header("Events")]
     public GameEvent onZombieDies;
 
@@ -23,6 +25,10 @@ public class ZombieHealth : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         emZ = GameObject.FindGameObjectWithTag("GameManager").GetComponent<EnemyManagerZ>();
         lm = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        if (checkPointNumber == 0 && emZ.currentCP > 0)
+        {
+            checkPointNumber = emZ.currentCP - 1;
+        }
     }
 
     // Update is called once per frame

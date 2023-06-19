@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
+using UnityEngine.VFX;
 
 public class EnemyManagerZ : MonoBehaviour
 {
@@ -53,14 +54,22 @@ public class EnemyManagerZ : MonoBehaviour
             for (int i = 0; i < cullEnemyList.Count; i++)
             {
                 GameObject x = cullEnemyList[i];
-                if (x.GetComponent<ZombieHealth>().checkPointNumber < cpID)
+                if (x.GetComponent<ZombieHealth>().checkPointNumber < cpID || x.GetComponent<ZombieHealth>().zSpawned) // Removes zombies from old CP and also spawned ones
                 {
+                    Debug.Log("Culling: " + x);
                     cullEnemyList.RemoveAt(i);
                     i--;
                     Destroy(x);
                 }
 
             }
+        }
+
+        // THIS SECTION ENSURES ANY TRIGGERED ZOMBIE SPAWNERS ARE RESET TOO
+        ZombieSpawn[] zombieSpawns = FindObjectsOfType<ZombieSpawn>();
+        for (int zs = 0; zs < zombieSpawns.Length; zs++)
+        {
+            zombieSpawns[zs].ResetSpawner(currentCP);
         }
 
 
@@ -80,7 +89,7 @@ public class EnemyManagerZ : MonoBehaviour
         for(int i = 0; i < enemyList.Count; i++)
         {
             GameObject e = enemyList[i];
-            if (e.GetComponent<ZombieHealth>().checkPointNumber < cpID)
+            if (e.GetComponent<ZombieHealth>().checkPointNumber < cpID) // || e.GetComponent<ZombieHealth>().zSpawned)
             {
                 enemyList.RemoveAt(i);
                 i--;

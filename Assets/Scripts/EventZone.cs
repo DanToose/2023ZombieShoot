@@ -24,11 +24,20 @@ public class EventZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !isDone)
         {
-            if (!isRepeatable)
-            {
-                isDone = true;
-            }
+            isDone = true;
+
             onTriggerEntered.Raise(this, null);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && isDone)
+        {
+            if (isRepeatable)
+            {
+                isDone = false;
+            }
         }
     }
 

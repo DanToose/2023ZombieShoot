@@ -37,10 +37,15 @@ public class Respawner : MonoBehaviour
             startingPoint = GameObject.FindGameObjectWithTag("StartPoint");
             currentCheckpoint = startingPoint;
         }
+
         currentCheckpoint = startingPoint;
         currentCPID = 0;
 
+        CPList.AddRange(GameObject.FindGameObjectsWithTag("StartPoint"));
         CPList.AddRange(GameObject.FindGameObjectsWithTag("CheckPoint"));
+
+
+
         InitialSpawn();
 
 
@@ -106,7 +111,7 @@ public class Respawner : MonoBehaviour
 
     }
 
-    private void ResetCPBasedTriggers()
+    private void ResetCPBasedTriggers() // Resets EventZones, ZombieWakeups, 
     {
         EventZone[] ezTriggerList = FindObjectsOfType<EventZone>();
         foreach (EventZone ezTrigger in ezTriggerList)
@@ -116,6 +121,8 @@ public class Respawner : MonoBehaviour
                 ezTrigger.ResetEventZone(currentCPID);
             }
         }
+
+
 
     }
 

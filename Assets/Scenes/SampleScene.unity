@@ -1518,7 +1518,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -4402,9 +4407,13 @@ MonoBehaviour:
     than ALL of them.
 
 
-    The purpose here is to allow the designer to create a
-    point where a specific group of zombies out of sight nearby become aware of the
-    player and attack.'
+    To use this, ''Starts Dormant'' must be checked on the
+    NavmeshAgentScript component of the zombies.
+
+
+    The purpose here is to allow
+    the designer to create a point where a specific group of zombies out of sight
+    nearby become aware of the player and attack.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4622,7 +4631,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -6771,7 +6785,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -7906,7 +7925,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -16861,7 +16885,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -17164,7 +17193,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -17279,7 +17313,7 @@ PrefabInstance:
     - target: {fileID: 6923281313602580214, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6923281313602580215, guid: 03e6406f989a9f3418568ba4823f1999,
         type: 3}
@@ -25447,8 +25481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.188, y: 0}
-  m_SizeDelta: {x: 252.462, y: 200}
+  m_AnchoredPosition: {x: -1.058, y: 0}
+  m_SizeDelta: {x: 238.943, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403148659
 MonoBehaviour:
@@ -25470,19 +25504,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This CheckPoint is index 0
+  m_text: 'This CheckPoint is index 0, and the designate starting point for the level.
 
 
-    The ''isStartpoint'' checkbox on it denotes
-    it as the place the Respawner on the GameManager will use to spawn the player
-    at the start of the game. You can use this to start from a certain Checkpoint
-    in testing too.
+    The
+    ''isStartpoint'' checkbox on it denotes it as the place the Respawner on the
+    GameManager will use to spawn the player at the start of the game. You can use
+    this to start from a certain Checkpoint in testing too.
 
 
-    It starts lit up because it is the active Checkpoint -
-    The Respawner script on the GameManager keeps track of the Checkpoints and can
-    assign an active and inactive material to Checkpoints based on their current
-    status.'
+    Active Checkpoints
+    are lit up in the current setup, but this item had its material set as such by
+    hand - By default, it would look like an inactive Checkpoint.
+
+
+    If you don''t
+    want to see the start point, just disable its renderer in the Inspector.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25545,7 +25582,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 4.581257, y: 3.4273834, z: 6.7915344, w: -8.183235}
+  m_margin: {x: 6.1384697, y: 3.4273834, z: -1.9165268, w: -8.183235}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -26124,7 +26161,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -30411,7 +30453,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -31876,6 +31923,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Name
@@ -33196,8 +33248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.20216942, y: -1.5082531}
-  m_SizeDelta: {x: 100.21, y: 89.857}
+  m_AnchoredPosition: {x: -0.00039100647, y: -1.5082531}
+  m_SizeDelta: {x: 101.49, y: 89.857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022870907
 MonoBehaviour:
@@ -34526,7 +34578,12 @@ PrefabInstance:
     - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865307284308208299, guid: 6f81612b9787d4ffb88f56609ec48f6b,
+        type: 3}
+      propertyPath: startDormant
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865307284308208301, guid: 6f81612b9787d4ffb88f56609ec48f6b,
         type: 3}
@@ -35605,10 +35662,15 @@ PrefabInstance:
         type: 3}
       propertyPath: oldCheckpoint
       value: 
-      objectReference: {fileID: 614825375}
+      objectReference: {fileID: 0}
     - target: {fileID: 4756701070499104976, guid: 2717fd0ad17b1c341b82e7f5d654b9bb,
         type: 3}
       propertyPath: sequentialOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756701070499104978, guid: 2717fd0ad17b1c341b82e7f5d654b9bb,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4756701070499104978, guid: 2717fd0ad17b1c341b82e7f5d654b9bb,
@@ -35794,6 +35856,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 2300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608698225777953843, guid: c6c9a427e011bbe4090289aba4f24155,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1608698225777953843, guid: c6c9a427e011bbe4090289aba4f24155,
         type: 3}

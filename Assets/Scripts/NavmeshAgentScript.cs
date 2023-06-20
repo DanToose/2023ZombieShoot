@@ -5,9 +5,11 @@ using UnityEngine.AI;
 
 public class NavmeshAgentScript : MonoBehaviour {
 
+    public bool startDormant;
     public Transform target;
     NavMeshAgent agent;
     public Vector3 startPos;
+
 
 
 
@@ -18,7 +20,11 @@ public class NavmeshAgentScript : MonoBehaviour {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = agent.transform.position;
-        Debug.Log(agent.transform.position);
+        if (startDormant ) 
+        {
+            enabled = false;
+        }
+
     }
 	
 	// Update is called once per frame

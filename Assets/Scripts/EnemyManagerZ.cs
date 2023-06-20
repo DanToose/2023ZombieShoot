@@ -42,6 +42,11 @@ public class EnemyManagerZ : MonoBehaviour
                 e.GetComponent<ZombieHealth>().ReviveZombie();
                 // New target reset
                 enemyNMA.target = GameObject.FindGameObjectWithTag("Player").transform;
+
+                if (enemyNMA.startDormant)
+                {
+                    enemyNMA.enabled = false;
+                }
             }
         }
         Debug.Log("All Enemies moved to start");
@@ -72,7 +77,18 @@ public class EnemyManagerZ : MonoBehaviour
             zombieSpawns[zs].ResetSpawner(currentCP);
         }
 
-
+        // THIS SECTION ENSURES ANY TRIGGERED ZOMBIE WAKEUPS ARE RESET TOO
+        ZombieWakeup[] zwTriggerList = FindObjectsOfType<ZombieWakeup>();
+        foreach (ZombieWakeup zwTrigger in zwTriggerList)
+        {
+            if (zwTrigger.relatedCheckpoint >= currentCP)
+            {
+                if (zwTrigger.Triggered)
+                {
+                    zwTrigger.Triggered = false;
+                }
+            }
+        }
 
     }
 

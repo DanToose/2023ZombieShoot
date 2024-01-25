@@ -24925,6 +24925,108 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0512349866c908e44ba84a7b39a54ca6, type: 3}
+--- !u!1001 &1285205453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223088364}
+    m_Modifications:
+    - target: {fileID: 410524873569241310, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: itemToLose
+      value: 
+      objectReference: {fileID: 11400000, guid: f47b8d89f3861344ea72e16828c891aa,
+        type: 2}
+    - target: {fileID: 410524873569241310, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: objectiveID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241310, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: objectiveName
+      value: Deliver the toenail to Fred
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241310, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: involvesItemLoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241311, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: c2c097459e92f7644bf67ef87467e841,
+        type: 2}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241312, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410524873569241313, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 35cef314510d47747a3f9404f182d965,
+        type: 2}
+    - target: {fileID: 410524873569241315, guid: 912576e5a15d92d4fae1b92932733905,
+        type: 3}
+      propertyPath: m_Name
+      value: Objective1a-DeliverToenail (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 912576e5a15d92d4fae1b92932733905, type: 3}
 --- !u!1 &1295347738
 GameObject:
   m_ObjectHideFlags: 0

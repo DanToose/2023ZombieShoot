@@ -11,6 +11,7 @@ public class DataValidation : MonoBehaviour
     {
         CheckInvItemIDs();
         CheckCPIDs();
+        CheckObjectives();
     }
 
     private void CheckInvItemIDs()
@@ -18,7 +19,7 @@ public class DataValidation : MonoBehaviour
         bool sharedIDFound = false;
         InvItemID[] invItemsInScene = FindObjectsOfType<InvItemID>();
 
-        foreach (InvItemID invItem in invItemsInScene) 
+        foreach (InvItemID invItem in invItemsInScene)
         {
             int thisID = invItem.ID;
             foreach (InvItemID otherItem in invItemsInScene)
@@ -28,10 +29,15 @@ public class DataValidation : MonoBehaviour
                     if (otherItem.ID == thisID)
                     {
                         sharedIDFound = true;
-                        Debug.Log("Found shared invItemIDs! " + invItem  + " and " + otherItem );
+                        Debug.Log("Found shared invItemIDs! " + invItem + " and " + otherItem);
                     }
                 }
             }
+        }
+
+        if (!sharedIDFound)
+        {
+            Debug.Log("GOOD NEWS - No shared invItemIDs!");
         }
     }
 
@@ -55,6 +61,11 @@ public class DataValidation : MonoBehaviour
                 }
             }
         }
+
+        if (!sharedCPIDFound)
+        {
+            Debug.Log("GOOD NEWS - No shared CP IDs!");
+        }
     }
 
     private void CheckObjectives()
@@ -77,6 +88,12 @@ public class DataValidation : MonoBehaviour
                 }
             }
         }
+
+        if (!sharedObjIDFound)
+        {
+            Debug.Log("GOOD NEWS - No shared Objective IDs!");
+        }
+
     }
 
 }
